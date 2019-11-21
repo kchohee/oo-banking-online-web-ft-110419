@@ -5,11 +5,11 @@ class Transfer
     @receiver = receiver
     @amount = amount
     @status = "pending"
-  end 
+  end
   def valid?
-    sender.valid? && receiver.valid? ? true : false 
-  end 
-  def execute_transaction 
+    sender.valid? && receiver.valid? ? true : false
+  end
+  def execute_transaction
     if @sender.balance > @amount && @status == "pending"
       @sender.balance -= @amount
       @receiver.balance += @amount
@@ -26,5 +26,5 @@ class Transfer
      @receiver.balance -= @amount
      @status = "reversed"
     end
-  end 
+  end
 end
