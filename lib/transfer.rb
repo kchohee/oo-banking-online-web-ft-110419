@@ -1,4 +1,5 @@
 class Transfer
+<<<<<<< HEAD
   attr_accessor :amount, :status, :sender, :receiver
   def initialize(sender, receiver,amount)
     self.sender = sender
@@ -28,5 +29,12 @@ class Transfer
       self.receiver.deposit(-1*self.amount)
       self.status = "reversed"
     end
+=======
+  attr_accessor :amount, :status, :sender, :receiever
+  def initialize(sender, receiever,amount)
+    self.sender = sender
+    self.receiever = receiever
+    self.amount = amount
+>>>>>>> 5d76f5d620dc5f9cf72af5fd27e3c43536795acb
   end
 end
